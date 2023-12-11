@@ -183,23 +183,34 @@ def main():
         transform=from_origin(bbox[0], bbox[3], (bbox[2] - bbox[0]) / len(arr[0]), (bbox[1] - bbox[3]) / len(arr))) as dst:
             dst.write(arr, 1) 
 
-
-        # # Reference GeoTIFF file with the correct projection
-        # reference_filename = "Wemast_wetland/wetland2/sentinel/PROJECTION.tiff"
-
-        # # New GeoTIFF file that needs the same projection
-        # output_filename = "Wemast_wetland/wetland2/sentinel/PROJECTION.tiff"
-
-        # Open the reference GeoTIFF to get its CRS
-
         # File paths
         geotiff_without_crs_path = output_filename
 
         geotiff_without_crs_path2 = output_filename2
-        file_path = "/Users/sethnyawacha/Desktop/FAST_API/Wemast_wetland/wetland2/sentinel/real_projection.tiff"
 
+      
+        # file_path = "/Users/sethnyawacha/Desktop/FAST_API/Wemast_wetland/wetland2/sentinel/real_projection.tiff"
+
+        # if not os.path.exists(file_path):
+        #         print(f"File not found: {file_path}")
+
+      
+        folder_path = "sentinel"
+
+        # Specify the file name
+        file_name = "real_projection.tiff"
+        
+        # Construct the full path to the file
+        file_path = os.path.join(folder_path, file_name)
+        
         if not os.path.exists(file_path):
-                print(f"File not found: {file_path}")
+            print(f"File not found: {file_path}")
+        else:
+            print(f"File found: {file_path}")
+        
+     
+        reference_geotiff_path = file_path
+      
         reference_geotiff_path = file_path
         output_geotiff_path = output_filename
 

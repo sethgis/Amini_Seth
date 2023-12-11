@@ -1,4 +1,6 @@
 # Amini_Seth
+![image](https://github.com/sethgis/Amini_Seth/assets/50513411/67048f4c-111d-4672-b38d-f9beb5481adf)
+
 Geo-backend_workflow
 The main code is located at the original_code.py file, it encapsulates all the automated workflow for the following explanation.
 ## Data pulling - It applies non-GEE data pulling, and pulls data from AWS Open data hub , through a GEO -API managed by element 84
